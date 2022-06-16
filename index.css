@@ -1,23 +1,30 @@
+/* Iteration-0: Override the web page styles by giving margin and padding as 0px */
 *{
   margin: 0;
   padding: 0;
 }
 
-/* Casacading plays its role here */
+/* Iteration-1 : Implement the cascade property here such that body gets #fff color and change font family to  Arial, sans-serif */
 body{
   background-color:red;
 }
+/* according to source order this property will come into the effect */
 body{
   font-family: Arial, sans-serif;
   background: #e9f0f5;
 }
 /* specificity plays role here */
+
+/* Iteration-2: Implement Specificity property for the h1 by selecting its class and change the text color to #fff  */
+
 h1{
   color:red;
 }
 .time{
   color: #fff;
 }
+
+/* Iteration-3 : Implement the Inheritance property for strong class by using controlling inheritance property called inherit  */
 .str{
   color: inherit;
 }
@@ -57,7 +64,9 @@ header{
   position: relative;
   width: 100%;
   min-height: 100px;
-  /* this property will be surely added to the web page  */
+  /* this property will be surely added to the web page because of !important property */
+  
+/*   Iteration-4 : Make the margin bottom of tl-block to 20px and give important property for its class to make it more specific */
   margin-bottom: 20px !important;
 }
 
