@@ -1,10 +1,10 @@
-/* Iteration-0: Override the web page styles by giving margin and padding as 0px */
+/* Iteration-1: Override the web page styles by giving margin and padding as 0px */
 *{
   margin: 0;
   padding: 0;
 }
 
-/* Iteration-1 : Implement the cascade property here such that body gets #fff color and change font family to  Arial, sans-serif */
+/* Iteration-2 : Implement the cascade  source order property here such that body gets #fff color and change font family to  Arial, sans-serif */
 body{
   background-color:red;
 }
@@ -13,9 +13,11 @@ body{
   font-family: Arial, sans-serif;
   background: #e9f0f5;
 }
+
+
 /* specificity plays role here */
 
-/* Iteration-2: Implement Specificity property for the h1 by selecting its class and change the text color to #fff  */
+/* Iteration-3: Implement Specificity property for the h1 by selecting its class and change the text color to #fff  */
 
 h1{
   color:red;
@@ -24,17 +26,45 @@ h1{
   color: #fff;
 }
 
-/* Iteration-3 : Implement the Inheritance property for strong class by using controlling inheritance property called inherit  */
+/* Iteration-4 : Implement the Inheritance property for strong class by using controlling inheritance property called inherit  */
+.str{
+  color:green;
+}
+
 .str{
   color: inherit;
 }
 
+/* Iteration-5: Select the class high-2 and give its color property to revert layer so that it Resets the property value applied to a selected element to the value established in a previous cascade layer. */
+.high-2{
+  color:blue;
+  background-color: yellow;
+}
+.high-2{
+  color: revert-layer;
+}
 p{
   margin: 10px 0;
   color: black;
 }
 .potential{
   color: blue;
+}
+/* Iteration-6: select the class high-1 and set its background color property to revert so that it Resets the property value applied to a selected element to the browser's default styling rather than the defaults applied to that property and then make its text color to black so that the text is visible in the web page
+*/
+.high-1{
+  color: #fff;
+  background-color:red;
+  background-color: revert;
+  color:black;
+}
+
+/* Iteration-7: select the class high and set its color property to initial so that it gets its initial color what it had before */
+.high{
+  color: #fff;
+  background-color:red;
+  color:initial;
+
 }
 
 .container{
@@ -50,6 +80,16 @@ header{
   padding-top: 20px;
 }
 
+/* Iteration-8:  select the class high-3 and set its background-color property to unset so that it Resets the property to its natural value, which means that if the property is naturally inherited it acts like inherit, otherwise it acts like initial*/
+.high-3{
+  color:brown;
+  background-color:lightcyan;
+}
+
+.high-3{
+  background-color: unset;
+}
+
 /* Styling the timeline */
 
 #timeline{
@@ -59,15 +99,23 @@ header{
   padding-top: 10px;
 }
 
-/* By inheritance same will be applied for all the tl-blocks */
+
+
+
 .tl-block{
   position: relative;
   width: 100%;
   min-height: 100px;
   /* this property will be surely added to the web page because of !important property */
   
-/*   Iteration-4 : Make the margin bottom of tl-block to 20px and give important property for its class to make it more specific */
+/*   Iteration-9 : Make the margin bottom of tl-block to 20px and give important property for its class to make it more specific so that any other  property wont override it */
   margin-bottom: 20px !important;
+}
+
+
+
+.tl-block{
+  margin-bottom:90px;
 }
 
 /* Styling the Year */
@@ -108,7 +156,7 @@ header{
 /* Styling the Events */
 
 
-/* inheritance plays its role here */
+
 .tl-event > div{
   width: 45%;
   position: relative;
@@ -141,7 +189,9 @@ header{
 }
 
 /* Styling the footer */
-
+/* Iteration-10: Inline css id always more than any other specificity weight no matter how many IDs are in the selectors.
+So apply inline css for the for the body background color to #fff
+*/
 footer{
   background: #5e6482;
   height: 40px;
