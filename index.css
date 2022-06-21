@@ -1,111 +1,128 @@
 /* Iteration-1: Override the web page styles by giving margin and padding as 0px */
-*{
+* {
   margin: 0;
   padding: 0;
 }
-/* Iteration-2 : Implement the cascade source order property here such that body gets #fff color and change font family to  Arial, sans-serif */
-body{
-  background-color:red;
+
+body {
+  background-color: red;
 }
-/* according to source order this property will come into the effect */
-body{
+
+/* Iteration-2 : Implement the cascade source order property such that body gets #fff color and change font family to  Arial, sans-serif */
+body {
   font-family: Arial, sans-serif;
   background: #e9f0f5;
 }
+
 /* [specificity plays role here] */
+
 /* Iteration-3: Implement Specificity property for the h1 by selecting its class and change the text color to #fff  */
-h1{
-  color:red;
+h1 {
+  color: red;
 }
-.time{
+
+.time {
   color: #fff;
 }
 
-.str{
-  color:green;
+.str {
+  color: green;
 }
-/* Iteration-4 : Implement the Inheritance property for strong class by using controlling inheritance property called inherit  */
-.str{
+
+/* Iteration-4 : Implement the Inheritance property for strong class by using inherit property  */
+.str {
   color: inherit;
 }
 
-.high-2{
-  color:blue;
+.high-2 {
+  color: blue;
   background-color: yellow;
 }
-/* Iteration-5: Select the class high-2 and give its color property to revert layer so that it Resets the property value applied to a selected element to the value established in a previous cascade layer. */
-.high-2{
+
+/* Iteration-5: Select the class high-2 and give its color property to revert layer so that it  its value established in a previous cascade layer. */
+.high-2 {
   color: revert-layer;
 }
-p{
+
+p {
   margin: 10px 0;
   color: black;
 }
-.potential{
+
+.potential {
   color: blue;
 }
 
-.high-1{
+.high-1 {
   color: #fff;
-  background-color:red;
-  /* Iteration-6: set the background color property to revert so that it Resets the property value applied to a selected element to the browser's default styling rather than the defaults applied to that property and then make its text color to black so that the text is visible in the web page
+  background-color: red;
+
+ /* Iteration-6: set the background color property to revert so that it Resets the property value to the browser's default styling and then make its text color to black
 */
   background-color: revert;
-  color:black;
+  color: black;
 }
 
-.high{
+.high {
   color: #fff;
-  background-color:red;
-  /* Iteration-7: select the class high and set its color property to initial so that it gets its initial color what it had before */
-  color:initial;
+  background-color: red;
 
+  /* Iteration-7: set its color property to initial so that it gets its initial color what it had before */
+  color: initial;
 }
-.container{
+
+.container {
   width: 940px;
   overflow: auto;
   margin: auto;
 }
-header{
+
+header {
   background: #5e6482;
   height: 70px;
   color: #fff;
   text-align: center;
   padding-top: 20px;
 }
-.high-3{
-  color:brown;
-  background-color:lightcyan;
+
+.high-3 {
+  color: brown;
+  background-color: lightcyan;
 }
-/* Iteration-8:  select the class high-3 and set its background-color property to unset so that it Resets the property to its natural value, which means that if the property is naturally inherited it acts like inherit, otherwise it acts like initial*/
-.high-3{
+
+/* Iteration-8:  select the class high-3 and set its background-color property to unset so that it Resets the property to its natural value*/
+.high-3 {
   background-color: unset;
 }
 
 /* Styling the timeline */
 
-#timeline{
-  background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/line.png?raw=true) repeat-y 50% 0;
+#timeline {
+  background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/line.png?raw=true)
+    repeat-y 50% 0;
   min-height: 700px;
   margin: 20px 0;
   padding-top: 10px;
 }
-.tl-block{
+
+.tl-block {
   position: relative;
   width: 100%;
   min-height: 100px;
- /*   Iteration-9 : Make the margin bottom of tl-block to 20px and give important property for its class to make it more specific so that any other  property wont override it */
-  /* [this property will be surely added to the web page because of !important property] */
+
+  /*   Iteration-9 : Make the margin bottom of tl-block to 20px and give important property for it so that any other property wont override it */
   margin-bottom: 20px !important;
 }
-.tl-block{
-  margin-bottom:90px;
+
+.tl-block {
+  margin-bottom: 90px;
 }
 
 /* Styling the Year */
 
-.tl-year{
-  background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/point-big.png?raw=true) no-repeat 50% 0;
+.tl-year {
+  background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/point-big.png?raw=true)
+    no-repeat 50% 0;
   display: block;
   width: 70px;
   height: 70px;
@@ -113,7 +130,8 @@ header{
   margin: auto;
   margin-top: 20px;
 }
-.tl-year div{
+
+.tl-year div {
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -122,8 +140,9 @@ header{
   text-align: center;
 }
 
-.tl-event{
-  background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/point-small.png?raw=true) no-repeat 50% 0;
+.tl-event {
+  background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/point-small.png?raw=true)
+    no-repeat 50% 0;
   margin: auto;
   width: 100%;
   overflow: hidden;
@@ -131,50 +150,65 @@ header{
   animation: fade;
   animation-duration: 3s;
 }
-@keyframes fade{
-  0%{opacity: 0;}
-  100%{opacity: 1;}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Styling the Events */
 
-.tl-event > div{
+.tl-event > div {
   width: 45%;
   position: relative;
 }
-.tl-event div div{
+
+.tl-event div div {
   background: #fff;
   border-radius: 10px;
   padding: 15px;
 }
-.tl-event div.event-r{
+
+.tl-event div.event-r {
   float: right;
-  background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/arrow-left.png?raw=true) no-repeat 0 0; 
+  background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/arrow-left.png?raw=true)
+    no-repeat 0 0;
 }
-.tl-event div.event-l{
+
+.tl-event div.event-l {
   float: left;
-  background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/arrow-right.png?raw=true) no-repeat top right;
+  background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/arrow-right.png?raw=true)
+    no-repeat top right;
 }
-.tl-event div.event-r div{
+
+.tl-event div.event-r div {
   margin-left: 20px;
 }
-.tl-event div.event-l div{
+
+.tl-event div.event-l div {
   margin-right: 20px;
 }
-.tl-event time{
+
+.tl-event time {
   background: #c03b44;
   color: #fff;
   font-size: 12px;
   padding: 5px;
   border-radius: 5px;
 }
+
 /* Styling the footer */
-/* Iteration-10: Inline css id always more than any other specificity weight no matter how many IDs are in the selectors.
-So apply inline css for the for the body background color to #fff
+
+/* Iteration-10: apply inline css for the for the body background color to #fff
 
 This is applied in the main html page of footer section
 */
-footer{
+
+footer {
   background: #5e6482;
   height: 40px;
   color: #fff;
@@ -182,37 +216,41 @@ footer{
   padding: 10px 0;
 }
 
-@media(max-width: 768px){
-  .container{
-      width: 95%;
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
   }
-  header{
-      height: 50px;
+  header {
+    height: 50px;
   }
-  h1{
-      font-size: 23px;
+  h1 {
+    font-size: 23px;
   }
-  #timeline{
-      background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/line.png?raw=true) repeat-y 30px 0;
+  #timeline {
+    background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/line.png?raw=true)
+      repeat-y 30px 0;
   }
-  .tl-year{
-      background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/point-big.png?raw=true) no-repeat 0 0;
-      text-align: left;
-      margin: 0;
+  .tl-year {
+    background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/point-big.png?raw=true)
+      no-repeat 0 0;
+    text-align: left;
+    margin: 0;
   }
-  .tl-event{
-      background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/point-small.png?raw=true) no-repeat 16px 0;
+  .tl-event {
+    background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/point-small.png?raw=true)
+      no-repeat 16px 0;
   }
-  .tl-event div{
-      width: 85%;
-      position: relative;
+  .tl-event div {
+    width: 85%;
+    position: relative;
   }
-  .tl-event div.event-l{
-      float: right;
-      background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/arrow-left.png?raw=true) no-repeat 0 0;
+  .tl-event div.event-l {
+    float: right;
+    background: url(https://github.com/SUBstylee/CSS-projects/blob/master/05-timeline/img/arrow-left.png?raw=true)
+      no-repeat 0 0;
   }
-  .tl-event div.event-l div{
-      margin-left: 20px;
-      margin-right: 0;
+  .tl-event div.event-l div {
+    margin-left: 20px;
+    margin-right: 0;
   }
 }
