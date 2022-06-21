@@ -12,7 +12,7 @@ body{
   font-family: Arial, sans-serif;
   background: #e9f0f5;
 }
-/* specificity plays role here */
+/* [specificity plays role here] */
 /* Iteration-3: Implement Specificity property for the h1 by selecting its class and change the text color to #fff  */
 h1{
   color:red;
@@ -94,9 +94,8 @@ header{
   position: relative;
   width: 100%;
   min-height: 100px;
-  /* this property will be surely added to the web page because of !important property */
-  
-/*   Iteration-9 : Make the margin bottom of tl-block to 20px and give important property for its class to make it more specific so that any other  property wont override it */
+ /*   Iteration-9 : Make the margin bottom of tl-block to 20px and give important property for its class to make it more specific so that any other  property wont override it */
+  /* [this property will be surely added to the web page because of !important property] */
   margin-bottom: 20px !important;
 }
 .tl-block{
