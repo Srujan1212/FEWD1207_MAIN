@@ -56,8 +56,7 @@ p {
 .high-1 {
   color: #fff;
   background-color: red;
-
- /* Iteration-6: set the background color property to revert so that it Resets the property value to the browser's default styling and then make its text color to black
+  /* Iteration-6: set the background color property to revert so that it Resets the property value to the browser's default styling and then make its text color to black
 */
   background-color: revert;
   color: black;
@@ -66,7 +65,6 @@ p {
 .high {
   color: #fff;
   background-color: red;
-
   /* Iteration-7: set its color property to initial so that it gets its initial color what it had before */
   color: initial;
 }
@@ -109,7 +107,6 @@ header {
   position: relative;
   width: 100%;
   min-height: 100px;
-
   /*   Iteration-9 : Make the margin bottom of tl-block to 20px and give important property for it so that any other property wont override it */
   margin-bottom: 20px !important;
 }
